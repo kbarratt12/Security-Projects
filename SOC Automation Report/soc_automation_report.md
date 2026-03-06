@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This project successfully implemented a comprehensive Security Operations Center (SOC) automation workflow that detects malicious activity, analyzes threats, and automatically creates security incidents with email notifications. The implementation demonstrates a complete security monitoring pipeline from endpoint detection through automated response.
+This project successfully implemented a comprehensive SOC automation workflow that detects malicious activity, analyzes threats, and automatically creates security incidents with email notifications. The implementation demonstrates a complete security monitoring pipeline from endpoint detection through automated response.
 
 ## Project Objectives
 
@@ -71,7 +71,7 @@ The primary goal was to create an automated security incident response system th
 
 ### Challenge 1: VM Infrastructure Issues
 **Problem**: Accidental snapshot corruption requiring complete rebuild
-**Resolution**: Recreated VDI using VirtualBox CLI and reinstalled all components. Developed expertise in snapshot management, sorting, and VDI restoration using command-line interface
+**Resolution**: Recreated VDI using VirtualBox CLI and reinstalled all components. Developed knowledge in snapshot management, sorting, and VDI restoration using command-line interface
 
 ### Challenge 2: VM Guest Additions Configuration
 **Problem**: Unable to copy/paste between host and guest systems, hindering workflow efficiency
