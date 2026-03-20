@@ -20,21 +20,21 @@
 | Component | Details |
 |-----------|---------|
 | Cloud Provider | DigitalOcean (VM) |
-| Honeypot Platform | T-Pot — 20+ containerized honeypot services |
+| Honeypot Platform | T-Pot , 20+ containerized honeypot services |
 | SIEM | Wazuh (centralized log aggregation + alerting) |
 | Log Storage | Elasticsearch with Kibana dashboards |
 | Automation | Shuffle SOAR + VirusTotal API |
 
 ### Network Design — Zero-Trust Segmentation
 
-The network was designed to maximize attack surface exposure while maintaining complete host isolation. All honeypot services run inside Docker containers — attacks never reach the host OS.
+The network was designed to maximize attack surface exposure while maintaining complete host isolation. All honeypot services run inside Docker containers so attacks never reach the host OS.
 
 **Firewall Rules:**
 
 | Direction | Ports | Purpose |
 |-----------|-------|---------|
 | Inbound | 1–64000 (TCP/UDP) | Expose honeypot services to internet |
-| Inbound | 64295 (SSH) | Management — restricted to single trusted IP |
+| Inbound | 64295 (SSH) | Management, restricted to single trusted IP |
 | Outbound | 1514–1515 | Wazuh agent → SIEM |
 | Outbound | 53/UDP, 443/TCP | DNS + system updates |
 
