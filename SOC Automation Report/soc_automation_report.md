@@ -7,7 +7,7 @@
 ![TheHive](https://img.shields.io/badge/TheHive-Case%20Management-yellow?style=flat-square)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-Cloud-0080FF?style=flat-square&logo=digitalocean)
 
-End-to-end SOC automation pipeline triggered by a Mimikatz execution on a Windows endpoint. Sysmon detects the process, Wazuh fires an alert, Shuffle pulls the SHA-256 hash via regex and sends it to VirusTotal for confirmation, then automatically creates a case in TheHive and emails the analyst — all without manual intervention.
+End-to-end SOC automation pipeline triggered by a Mimikatz execution on a Windows endpoint. Sysmon detects the process, Wazuh fires an alert, Shuffle pulls the SHA-256 hash via regex and sends it to VirusTotal for confirmation, then automatically creates a case in TheHive and emails the analyst all without manual intervention.
 
 ---
 
