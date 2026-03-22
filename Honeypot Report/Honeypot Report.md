@@ -7,7 +7,7 @@
 ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-Log%20Storage-yellow?style=flat-square&logo=elasticsearch)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-Cloud-0080FF?style=flat-square&logo=digitalocean)
 
-49-day T-Pot honeypot deployment on DigitalOcean capturing **2M+ attacks** across 20+ containerized services. Integrated with Wazuh SIEM for real-time log forwarding and analyzed via Kibana dashboards. Zero successful host breaches confirmed throughout the deployment.
+49-day T-Pot honeypot deployment on DigitalOcean capturing **2M+ attacks** across 20+ containerized services. Integrated with Wazuh SIEM for real-time log forwarding and analyzed via Kibana dashboards.
 
 ---
 
