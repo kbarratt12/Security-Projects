@@ -78,9 +78,9 @@ Baselines represent estimated manual analyst workflow times accounting for real 
 | Metric | Manual Baseline | Automated | Notes |
 |--------|----------------|-----------|-------|
 | MTTR (credential dumping alert) | 45–90 min | <1 min | Manual baseline assumes alert queue wait time + triage + enrichment + case creation. 30 min is only realistic if the analyst is already watching the queue. |
-| Alert enrichment (hash lookup) | 10–15 min | <30 sec | Navigate to VirusTotal, paste hash, read report, document findings — 10 min is realistic for a competent analyst. |
-| Case creation | 5–15 min | <10 sec | Manually filling all TheHive fields (title, description, severity, TLP, tags, observables) with proper context takes longer than it looks. |
-| Analyst notification | Variable | <1 min | "Variable" is the honest answer — depends entirely on whether the analyst is actively watching the queue or in a meeting. |
+| Alert enrichment (hash lookup) | 10–15 min | <30 sec | Navigate to VirusTotal, paste hash, read report, document findings, 10 min is realistic for a competent analyst. |
+| Case creation | 5–15 min | <10 sec | Manually filling all TheHive fields (title, description, severity, TLP, tags, observables) with proper context takes longer than a computer |
+| Analyst notification | Variable | <1 min | Depends on whether the analyst is actively watching the queue or not |
 
 ---
 
