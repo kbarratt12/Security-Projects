@@ -1,1 +1,1 @@
-This project was done to show that some automation can be used to make analysis of logs go faster. I got PCAPs from a website online and then I generated logs using Suricata, then took those logs and created sctripts to parse out the information I needed quickly. 
+This project was done to show that some automation can be used to make analysis of logs go faster. I got PCAPs from a website online and then I generated logs using Suricata, then took those logs and created scripts to parse out the information I needed quickly. 
