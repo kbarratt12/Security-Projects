@@ -6,7 +6,7 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=flat-square&logo=ubuntu)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-Cloud-0080FF?style=flat-square&logo=digitalocean)
 
-Cloud-deployed forensics pipeline combining Zeek, Suricata, and custom Bash scripts to automate PCAP analysis and IOC extraction. Validated against real-world malware captures from malware-traffic-analysis.net, reducing multi-hour manual investigations to under 15 minutes.
+Cloud-deployed forensics pipeline combining Zeek, Suricata, and custom Bash scripts to automate PCAP analysis and IOC extraction. Validated against real-world malware captures from malware-traffic-analysis.net, reducing manual investigations to under 15 minutes.
 
 ---
 
@@ -240,7 +240,7 @@ Validated against two real malware PCAPs from malware-traffic-analysis.net with 
 
 **Victim:** `10.1.17.215` / `shutchenson@BLUEMOONTUESDAY.COM`
 
-A user downloaded what appeared to be Microsoft Teams from a typo-squatted domain (`authenticatoor.org`). The infection chain used PowerShell for staged payload delivery across six files, with a 43-minute C2 session over unencrypted HTTP to `5.252.153.241` — intentionally unencrypted to blend with normal traffic.
+A user downloaded what appeared to be Microsoft Teams from a typo-squatted domain (`authenticatoor.org`). The infection cused PowerShell for staged payload delivery across six files, with a 43-minute C2 session over unencrypted HTTP to `5.252.153.241` — intentionally unencrypted to blend with normal traffic.
 
 **Attack chain:**
 1. Initial dropper via HTTP GET (417 bytes)
@@ -273,7 +273,7 @@ A user downloaded what appeared to be Microsoft Teams from a typo-squatted domai
 
 A categorically more sophisticated operation. Rather than social engineering, this was drive-by delivery via the **LandUpdate808 exploit kit** (Priority 1 Suricata alert on `hillcoweb.com`). The attacker established persistent C2 using Cloudflare Tunnel and legitimate DNS providers as obfuscation layers, with a 34-minute SMB/Kerberos session to the domain controller indicating active lateral movement preparation.
 
-**Exfiltration pattern:** Repeated POST requests with consistent ~30KB payloads to `windows-msgas.com` and a Cloudflare Tunnel endpoint — chunked data exfiltration over obfuscated channels.
+**Exfiltration pattern:** Repeated POST requests with consistent ~30KB payloads to `windows-msgas.com` and a Cloudflare Tunnel endpoint where data exfiltration happened in chunks over obfuscated channels.
 
 **Key IOCs extracted:**
 
@@ -291,7 +291,7 @@ A categorically more sophisticated operation. Rather than social engineering, th
 
 </details>
 
-**Notable:** Single-IP blocking is ineffective against this infrastructure — the attacker load-balanced across 5+ Cloudflare IPs. The IOC list enables DNS sinkhole policies and ASN-level rules rather than per-IP blocks.
+**Notable:** Single-IP blocking is ineffective against this infrastructure since the attacker used 5+ Cloudflare IPs. The IOC list enables DNS sinkhole policies and ASN-level rules rather than per-IP blocks.
 
 ---
 
