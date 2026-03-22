@@ -7,7 +7,7 @@
 ![Elasticsearch](https://img.shields.io/badge/Elasticsearch-Log%20Storage-yellow?style=flat-square&logo=elasticsearch)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-Cloud-0080FF?style=flat-square&logo=digitalocean)
 
-49-day T-Pot honeypot deployment on DigitalOcean capturing **2M+ attacks** across 20+ containerized services. Integrated with Wazuh SIEM for real-time log forwarding and analyzed via Kibana dashboards.
+49-day T-Pot honeypot deployment on DigitalOcean capturing **2M+ attacks** across 20+ containerized services. Analyzed via Kibana dashboards and attempted integration with Wazuh SIEM.
 
 ---
 
@@ -24,7 +24,7 @@
 
 ### Network Design — Zero-Trust Segmentation
 
-The network was designed to maximize attack surface exposure while maintaining complete host isolation. All honeypot services run inside Docker containers — attacks never reach the host OS.
+The network was designed to maximize attack surface exposure while maintaining complete host isolation. All honeypot services run inside Docker containers.
 
 **Firewall Rules:**
 
@@ -52,7 +52,7 @@ The network was designed to maximize attack surface exposure while maintaining c
 | Most common password | `P@ssw0rd` (17 attempts) |
 | Confirmed host breaches | 0 |
 
-**Attack timing** occurred in coordinated bursts rather than steady streams — consistent with managed botnet campaigns using intermittent activity for operational security.
+**Attack timing** occurred in coordinated bursts rather than steady streams which is consistent with managed botnet campaigns using intermittent activity for operational security.
 
 **Attacker reputation breakdown:**
 
@@ -115,7 +115,7 @@ The network was designed to maximize attack surface exposure while maintaining c
 | Google Cloud Platform | 401 |
 | EMPRESA NACIONAL DE TELECOMUNICACIONES | 396 |
 
-Notable: attackers heavily leveraged legitimate cloud infrastructure (GCP, DigitalOcean, Scaleway) alongside compromised residential and business networks — a common evasion tactic against IP-reputation-based filtering.
+Notable: attackers heavily leveraged legitimate cloud infrastructure (GCP, DigitalOcean, Scaleway) alongside compromised residential and business networks which is a common evasion tactic against IP-reputation-based filtering.
 
 </details>
 
@@ -154,7 +154,7 @@ Notable: attackers heavily leveraged legitimate cloud infrastructure (GCP, Digit
 | 1234 | 5 |
 | password | 5 |
 
-Credential patterns confirm automated tooling — default and common passwords dominate with no personalization. `P@ssw0rd` leading suggests attackers are aware of basic complexity policies and are testing the minimum bar.
+Credential patterns confirm automated tooling (default and common passwords dominate with no personalization). `P@ssw0rd` leading suggests attackers are aware of basic complexity policies and are testing the minimum bar.
 
 </details>
 
