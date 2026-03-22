@@ -214,7 +214,7 @@ Current blocker: T-Pot's internal security hardening restricts direct Kibana API
 
 ## Lessons Learned
 
-- Containerization is an effective containment boundary — 2M+ attacks, zero host-level breaches
-- Botnet operators actively use legitimate cloud infrastructure to evade reputation-based blocking — ASN-level monitoring matters more than simple IP blocklists
-- Burst-pattern attack timing is a deliberate OPSEC tactic, not noise — behavioral detection catches what signature-based rules miss
+- Containerization is an effective containment boundary
+- Botnet operators actively use legitimate cloud infrastructure to evade reputation-based blocking, ASN-level monitoring matters more than simple IP blocklists
+- Burst-pattern attack timing is a deliberate OPSEC tactic, not noise. Behavioral detection is able to catch what signature-based rules miss
 - Even a basic deployment generates enough data to surface real attacker patterns around credential choice, service targeting, and infrastructure reuse
