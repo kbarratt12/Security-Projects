@@ -86,8 +86,6 @@ Baselines represent estimated manual analyst workflow times accounting for real 
 
 ## Troubleshooting
 
-Eight integration issues hit during build — the main ones worth documenting:
-
 | Issue | Root Cause | Resolution |
 |-------|-----------|------------|
 | VM complete rebuild required | Accidental snapshot corruption | Recreated VDI via VirtualBox CLI; rebuilt all components |
