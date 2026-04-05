@@ -6,7 +6,7 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-E95420?style=flat-square&logo=ubuntu)
 ![DigitalOcean](https://img.shields.io/badge/DigitalOcean-Cloud-0080FF?style=flat-square&logo=digitalocean)
 
-Cloud-deployed forensics pipeline combining Zeek, Suricata, and custom Bash scripts to automate PCAP analysis and IOC extraction. Validated against real-world malware captures from malware-traffic-analysis.net, reducing manual investigations to under 15 minutes.
+Forensics pipeline combining Zeek, Suricata, and custom Bash scripts to automate PCAP analysis and IOC extraction. Validated against real-world malware captures from malware-traffic-analysis.net, reducing manual investigations to under 15 minutes.
 
 ---
 
