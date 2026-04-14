@@ -63,17 +63,17 @@ Each technique tested has a dedicated findings file documenting the raw Wazuh al
 
 | Technique | Findings |
 |---|---|
-| T1003.001 — LSASS Memory | [View findings](findings/T1003-lsass-dump.md) |
-| T1059.001 — PowerShell | [View findings](findings/T1059-powershell.md) |
-| T1059.003 — Windows Command Shell | [View findings](findings/T1059-windows-cmd.md) |
-| T1053.005 — Scheduled Task | [View findings](findings/T1053-scheduled-task.md) |
-| T1070.001 — Clear Event Logs | [View findings](findings/T1070-log-clearing.md) |
-| T1082 — System Information Discovery | [View findings](findings/T1082-sysinfo-discovery.md) |
-| T1083 — File and Directory Discovery | [View findings](findings/T1083-directory-discovery.md) |
-| T1105 — Ingress Tool Transfer | [View findings](findings/T1105-ingress-tool-transfer.md) |
-| T1136.001 — Create Local Account | [View findings](findings/T1136-account-creation.md) |
-| T1218.011 — Rundll32 | [View findings](findings/T1218-rundll32.md) |
-| T1547.001 — Registry Run Keys | [View findings](findings/T1547-run-keys.md) |
+| T1003.001 — LSASS Memory | [View Findings](Findings/T1003-lsass-dump.md) |
+| T1059.001 — PowerShell | [View Findings](Findings/T1059-powershell.md) |
+| T1059.003 — Windows Command Shell | [View Findings](Findings/T1059-windows-cmd.md) |
+| T1053.005 — Scheduled Task | [View Findings](Findings/T1053-scheduled-task.md) |
+| T1070.001 — Clear Event Logs | [View Findings](Findings/T1070-log-clearing.md) |
+| T1082 — System Information Discovery | [View Findings](Findings/T1082-sysinfo-discovery.md) |
+| T1083 — File and Directory Discovery | [View Findings](Findings/T1083-directory-discovery.md) |
+| T1105 — Ingress Tool Transfer | [View Findings](Findings/T1105-ingress-tool-transfer.md) |
+| T1136.001 — Create Local Account | [View Findings](Findings/T1136-account-creation.md) |
+| T1218.011 — Rundll32 | [View Findings](Findings/T1218-rundll32.md) |
+| T1547.001 — Registry Run Keys | [View Findings](Findings/T1547-run-keys.md) |
 
 ---
 
