@@ -1,0 +1,81 @@
+<group name="local,sysmon,">
+
+  <!-- ===================================== -->
+  <!-- T1003.001 - LSASS Dump Detection      -->
+  <!-- ===================================== -->
+  <rule id="100110" level="13">
+    <if_group>sysmon_event1</if_group>
+
+    <field name="win.eventdata.image" type="pcre2">(?i)procdump\.exe</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)lsass\.exe</field>
+
+    <description>Credential dumping detected: Procdump targeting LSASS</description>
+
+    <mitre>
+      <id>T1003.001</id>
+    </mitre>
+  </rule>
+
+  <!-- ===================================== -->
+  <!-- T1218.011 - Rundll32 LOLBIN           -->
+  <!-- ===================================== -->
+  <rule id="100111" level="14">
+    <if_group>sysmon_event1</if_group>
+
+    <field name="win.eventdata.image" type="pcre2">(?i)rundll32\.exe</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)javascript:|mshtml|RunHTMLApplication</field>
+
+    <description>LOLBIN abuse: Rundll32 JavaScript execution detected</description>
+
+    <mitre>
+      <id>T1218.011</id>
+    </mitre>
+  </rule>
+
+  <!-- ===================================== -->
+  <!-- T1083 - Directory Discovery           -->
+  <!-- ===================================== -->
+  <rule id="100112" level="10">
+    <if_group>sysmon_event1</if_group>
+
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)dir\s+/s|tree\s+/f</field>
+
+    <description>Recursive directory enumeration detected (possible reconnaissance)</description>
+
+    <mitre>
+      <id>T1083</id>
+    </mitre>
+  </rule>
+
+  <!-- ===================================== -->
+  <!-- T1070.001 - Event Log Clearing        -->
+  <!-- ===================================== -->
+  <rule id="100113" level="15">
+    <if_group>sysmon_event1</if_group>
+
+    <field name="win.eventdata.image" type="pcre2">(?i)wevtutil\.exe</field>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)cl\s+(system|security|application)</field>
+
+    <description>Event log clearing attempt detected via wevtutil</description>
+
+    <mitre>
+      <id>T1070.001</id>
+    </mitre>
+  </rule>
+
+  <!-- ===================================== -->
+  <!-- T1136.001 - Local Account Creation    -->
+  <!-- ===================================== -->
+  <rule id="100114" level="14">
+    <if_group>sysmon_event1</if_group>
+
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)net\s+user\s+/add</field>
+
+    <description>Local user account creation detected</description>
+
+    <mitre>
+      <id>T1136.001</id>
+    </mitre>
+  </rule>
+
+</group>
