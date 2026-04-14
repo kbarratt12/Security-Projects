@@ -42,7 +42,7 @@ The lab simulates a realistic blue team workflow: run the attack, observe what f
 The lab was structured around three detection layers, built in order of complexity.
 
 **Layer 1 — Atomic detection**
-The foundation. Low-level Sysmon event matching on process creation, command-line patterns, and registry writes. These are the rules Wazuh ships with or that fire on raw event IDs. They work, but they're noisy and low-severity — they tell you something happened, not what an attacker was doing.
+Alerting on Low-level Sysmon event matching on process creation, command-line patterns, and registry writes. These are the rules Wazuh ships with or that fire on raw event IDs. These rules work but they are noisy and low-severity which can tell you something happened, not what an attacker was doing.
 
 **Layer 2 — Technique-specific detection**
 Instead of "cmd.exe spawned by PowerShell," the goal was rules that fire on specific adversary behavior like procdump targeting lsass, rundll32 executing JavaScript, wevtutil clearing logs. Each rule carries a MITRE technique ID and a severity level that reflects actual risk rather than the default level 3–4 that most generic rules fire at.
@@ -59,7 +59,7 @@ The environment was provisioned using Terraform on AWS and using my existing hom
 
 ## Log Analysis & Findings
 
-Each technique tested has a dedicated findings file documenting the raw Wazuh alerts, what fired, what didn't, and why. These are the primary evidence files for this project.
+Each technique tested has a dedicated findings file documenting the raw Wazuh alerts, what fired, what didn't, and why. 
 
 | Technique | Findings |
 |---|---|
